@@ -1,0 +1,356 @@
+
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+      <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+      <title>Sports Prediction</title>
+      <style>
+        *{
+          margin:0;
+        padding: 0;
+        box-sizing: border-box;
+            
+           }
+        body{
+          background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 1;
+        /* overflow: hidden; */
+        background:#ffffff;
+        overflow: auto;
+            }
+        .page{
+          width:100%;
+        height:100%;
+            }
+        nav{
+          margin:10px;
+        width: 100%;
+        height:75px;
+              
+            }
+
+        .title{
+          margin: 15px;
+            }
+        .heading{
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-size:30px;
+            }
+
+        p{
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-size:26px;
+        font-weight: bold;
+              }
+        label{
+          font-weight: bold;
+                 }
+        .button{
+          display: flex;
+        justify-content: center;
+        align-items: center;
+                  }
+        .buttonn{
+          height:55px;
+        width:150px;
+        font-size:26;
+        font-weight: bold;
+            }
+        .button.btn{
+          font-size:30;
+        font-weight: bold;
+        margin: 10px;
+        width: 125px;
+            }
+
+        form{
+          padding:10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              
+            }
+        .result{
+          margin-top: 15px;
+            }
+        .footer{
+          margin-top:20px;
+            }
+      </style>
+  </head>
+  <body>
+    <div class="page container-fluid" name="page">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Sports Prediction</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                 
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sports
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item active" href="#">Football</a></li>
+                  <li><a class="dropdown-item active" href="#">Cricket</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Kabbadi</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <div class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+     
+     
+      <!---- <div class="nav container-sm" name="navbar">
+        <nav class="navbar navbar-expand-lg bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar scroll</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Link
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Link</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="se form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div> -->
+      <div class="title container-fluid" name="title">
+        <p class="heading">Football (EPL) Match Predictor </p>
+      </div>
+
+      <div class="form container-sm" name="form">
+
+        <form action="/" method="POST" class="form container-fluid">
+
+          <table class="ui celled table">
+            <tbody>
+              <tr>
+                <td data-label="Name"> <div class="col-sm-10">
+                  <select class="form-select" name="team1" id="team1" required>
+                    <option value="405" selected>Choose Your Team</option>
+                    <option value="0">Arsenal</option>
+                    <option value="1">Aston Villa</option>
+                    <option value="2">Brentford</option>
+                    <option value="3">Brighton and Hove Albion</option>
+                    <option value="4">Burnley</option>
+                    <option value="5">Chelsea</option>
+                    <option value="6">Crystal Palace</option>
+                    <option value="7">Everton</option>
+                    <option value="8">Fulham</option>
+                    <option value="9">Leeds United</option>
+                    <option value="10">Leicester City</option>
+                    <option value="11">Liverpool</option>
+                    <option value="12">Manchester City</option>
+                    <option value="13">Manchester United</option>
+                    <option value="14">Newcastle United</option>
+                    <option value="15">Norwich City</option>
+                    <option value="16">Shefield United</option>
+                    <option value="17">Southampton</option>
+                    <option value="18">Tottenham Hotspur</option>
+                    <option value="19">Watford</option>
+                    <option value="20">West Browmich Albion</option>
+                    <option value="21">West Ham United</option>
+                    <option value="22">Wolverhampton Wanderers</option>
+                  </select>
+                </div></td>
+                <td data-label="Age"> <div class="col-sm-10">
+                  <select class="form-select" name="team2" id="team2" required>
+                    <option value="405" selected>Choose Opponent Team</option>
+                    <option value="0">Arsenal</option>
+                    <option value="1">Aston Villa</option>
+                    <option value="2">Brentford</option>
+                    <option value="3">Brighton and Hove Albion</option>
+                    <option value="4">Burnley</option>
+                    <option value="5">Chelsea</option>
+                    <option value="6">Crystal Palace</option>
+                    <option value="7">Everton</option>
+                    <option value="8">Fulham</option>
+                    <option value="9">Leeds United</option>
+                    <option value="10">Leicester City</option>
+                    <option value="11">Liverpool</option>
+                    <option value="12">Manchester City</option>
+                    <option value="13">Manchester United</option>
+                    <option value="14">Newcastle United</option>
+                    <option value="15">Norwich City</option>
+                    <option value="16">Shefield United</option>
+                    <option value="17">Southampton</option>
+                    <option value="18">Tottenham Hotspur</option>
+                    <option value="19">Watford</option>
+                    <option value="20">West Browmich Albion</option>
+                    <option value="21">West Ham United</option>
+                    <option value="22">Wolverhampton Wanderers</option>
+                  </select>
+                </div></td>
+              </tr>
+
+              <tr>
+                <td data-label="Name">
+                  <div class="row mb-3">
+                    <div class="col-sm-10">
+                      <select class="form-select" name="para1" id="ven" required>
+                        <option value="405" selected>Venue</option>
+                        <option value="1">Home</option>
+                        <option value="0">Away</option>
+                      </select>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Age">
+                  <div class="row mb-3">
+                    <div class="col-sm-10">
+                      <input type="text" name="para5" id="xga" placeholder="EGA Expected goal from Opponent" class="form-control" required>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Name"><div class="row mb-3">
+                  <div class="col-sm-10">
+                    <select class="form-select" name="para3" id="d" required>
+                      <option value="405" selected>Choose Day</option>
+                      <option value="3">Sunday</option>
+                      <option value="4">Monday</option>
+                      <option value="5">Tuesday</option>
+                      <option value="6">Wednesday</option>
+                      <option value="0">Thursday</option>
+                      <option value="1">Friday</option>
+                      <option value="2">Saturday</option>
+                    </select>
+                  </div>
+                </div>
+                </td>
+                <td data-label="Age">
+                  <div class="row mb-3">
+                    <div class="col-sm-10">
+                      <input type="text" placeholder="Enter EG Expected Goalfor myteam" name="para4" id="xg" class="form-control" required>
+                    </div>
+                  </div></td>
+
+              </tr>
+              <tr>
+                <td data-label="Name">
+                  <div class="col-sm-10">
+                    <input type="text" name="para2" class="form-control" id="time" placeholder="Enter Time" required\>
+                  </div>
+                </div>
+              </td>
+              <td data-label="Age">
+                <div class="row mb-3">
+                  <div class="col-sm-10">
+                    <input type="text" name="para6" id="gf" placeholder=" Enter GF Value" class="form-control" required>
+                  </div>
+                </div></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="button">
+          <button type="submit" name="normal" value="normal" onclick="savebt()" class="buttonn btn btn-outline-success">Predict</button>
+          <input type="button" name="auto" value="Auto" onclick="autobt()" class="buttonn btn btn-outline-success" />
+        </div>
+        <div class="result container-fluid">
+          <p> {{ text }}</p>
+        </div>
+      </form>
+
+
+      <div class="footer container-sm">
+        <h6> Model Accuracy: 84.78% </h6>
+        <h6> Model Precision: 82.97% </h6>
+      </div>
+    </div>
+
+    <script language="javascript">
+      function autobt(){
+        let t1 =Math.floor(Math.random()*(22-0))
+      let t2= Math.floor(Math.random()*(22-0))
+      let ven=Math.floor(Math.random()*(1-0))
+      let hr=Math.floor(Math.random()*(23-0))
+      let d=Math.floor(Math.random()*(6-0))
+      let xg=(Math.random() * (4.6 - 0)).toFixed(2)
+      let xga=(Math.random() * (5 - 0)).toFixed(2)
+      let gf=(Math.random() * (9 - 0)).toFixed(2)
+      let team={
+        12: "Manchester City",5:"Chelsea", 0:"Arsenal",18: "Tottenham Hotspur", 13:'Manchester United' , 21:'West Ham United', 22:'Wolverhampton Wanderers', 14:'Newcastle United',   10:'Leicester City',  3:'Brighton and Hove Albion',
+      2:'Brentford',17:'Southampton', 6:'Crystal Palace', 1:'Aston Villa', 9:'Leeds United', 4:'Burnley',  7:'Everton', 19:'Watford',  15:'Norwich City',  11:'Liverpool',  8:'Fulham',  20:'West Bromwich Albion',  16:'Sheffield United'
+            }
+
+      let day={
+        0:"Thursday",1:"Friday",2:"Saturday",3:"Sunday",4:"Monday",5:"Tuesday",6:"Wednesday"
+            }
+      document.getElementById("team1").value=t1
+      document.getElementById("team2").value=t2
+      document.getElementById("ven").value=ven
+      document.getElementById("d").value=d
+      document.getElementById("xg").value=xg
+      document.getElementById("time").value=hr
+      document.getElementById("xga").value=xga
+      document.getElementById("gf").value=gf
+           }
+
+      function savebt(){
+        let t1 =Math.floor(Math.random()*(22-0))
+      console.log(t1)
+      if(document.getElementById("team1").value==document.getElementById("team2").value)
+      {
+        alert("Team name cannot be SAME")
+      }
+      if(document.getElementById("para1").value==405 || document.getElementById("para1").value==405 || document.getElementById("team2").value==405|| document.getElementById("team1").value==405  ){
+        alert("Please Select Options")
+      }
+           
+           }
+
+    </script>
+  </body>
+</html>
