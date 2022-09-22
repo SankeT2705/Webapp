@@ -17,9 +17,8 @@ def prediction():
         xg = float(request.form["para4"])
         xga = float(request.form["para5"])
         gf = float(request.form["para6"])
-        if myteam == apponent:
-            pred = 'ohh! Same team Name'
-        elif myteam == 405 or apponent == 405 or venue == 405 or day == 405:
+        
+        if myteam == 405 or apponent == 405 or venue == 405 or day == 405:
             pred = ' Choose Correct Option '
         elif time > 24 or time < 0:
             pred = 'Time Should be between 0 to 24'
