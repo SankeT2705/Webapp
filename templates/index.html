@@ -176,7 +176,7 @@
             <tbody>
               <tr>
                 <td data-label="Name"> <div class="col-sm-10">
-                  <select class="form-select" name="team1" id="team1" required>
+                  <select class="form-select" onchange="selection()" name="team1" id="team1" required>
                     <option value="405" selected>Choose Your Team</option>
                     <option value="0">Arsenal</option>
                     <option value="1">Aston Villa</option>
@@ -311,7 +311,55 @@
     </div>
 
     <script language="javascript">
+       function selection()
+      {
+        value=document.getElementById("team1").value
+        let team={
+          0:{xg:'14.17',xga:'5.9',g:'17'},
+          1:{xg:'17.52',xga:'3.99',g:'23' },
+          2:{xg:'11.10',xga:'9.80',g:'15'},
+          3:{ xg:'11.26',xga:'5.66',g:'11'},
+          5:{ xg:'8.42',xga:'9.16',g:'8'},
+          6:{xg:'7.55',xga:'11.39',g:'7'},
+          7:{ xg:'7.97',xga:'10.88',g:'5'},
+          8:{xg:'8.98',xga:'13.23',g:'12'},
+          9:{ xg:'9.09',xga:'8.73',g:'10'},
+          10:{xg:'6.62',xga:'12.75',g:'10'},
+          11:{ xg:'14.11',xga:'7.15',g:'15'},
+          12:{xg:'17.52',xga:'3.99',g:'23'},
+          13:{ xg:'8.81',xga:'8.04',g:'8'},
+          14:{xg:'11.29',xga:'10.31',g:'8'},
+          17:{xg:'7.26',xga:'9.15',g:'11' },
+          18:{xg:'12.5',xga:'7.21',g:'18'},
+          21:{ xg:'7.03',xga:'8.52',g:'3'},
+          22:{xg:'6.84',xga:'8.37',g:'3'},
+      }
+      console.log(value)
+      document.getElementById("xg").value=team[value].xg
+      document.getElementById("xga").value=team[value].xga
+      document.getElementById("gf").value=team[value].g
+      }
       function autobt(){
+         let team={
+          0:{xg:'14.17',xga:'5.9',g:'17'},
+          1:{xg:'17.52',xga:'3.99',g:'23' },
+          2:{xg:'11.10',xga:'9.80',g:'15'},
+          3:{ xg:'11.26',xga:'5.66',g:'11'},
+          5:{ xg:'8.42',xga:'9.16',g:'8'},
+          6:{xg:'7.55',xga:'11.39',g:'7'},
+          7:{ xg:'7.97',xga:'10.88',g:'5'},
+          8:{xg:'8.98',xga:'13.23',g:'12'},
+          9:{ xg:'9.09',xga:'8.73',g:'10'},
+          10:{xg:'6.62',xga:'12.75',g:'10'},
+          11:{ xg:'14.11',xga:'7.15',g:'15'},
+          12:{xg:'17.52',xga:'3.99',g:'23'},
+          13:{ xg:'8.81',xga:'8.04',g:'8'},
+          14:{xg:'11.29',xga:'10.31',g:'8'},
+          17:{xg:'7.26',xga:'9.15',g:'11' },
+          18:{xg:'12.5',xga:'7.21',g:'18'},
+          21:{ xg:'7.03',xga:'8.52',g:'3'},
+          22:{xg:'6.84',xga:'8.37',g:'3'},
+      }
         let t1 =Math.floor(Math.random()*(22-0))
       let t2= Math.floor(Math.random()*(22-0))
       let ven=Math.floor(Math.random()*(1-0))
@@ -332,10 +380,10 @@
       document.getElementById("team2").value=t2
       document.getElementById("ven").value=ven
       document.getElementById("d").value=d
-      document.getElementById("xg").value=xg
+       document.getElementById("xg").value=team[t1].xg
       document.getElementById("time").value=hr
-      document.getElementById("xga").value=xga
-      document.getElementById("gf").value=gf
+      document.getElementById("xga").value=team[t1].xga
+      document.getElementById("gf").value=team[t1].g
            }
 
       function savebt(){
